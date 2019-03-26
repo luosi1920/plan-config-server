@@ -1,0 +1,43 @@
+server:
+  port: 9090
+
+register:
+  host: localhost
+  port: 9000
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: localhost
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://${register.host}:${register.port}/eureka/
+
+spring:
+  application:
+    name: plan-warehousing-web
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  rabbitmq:
+    host: 192.168.71.146
+    port: 5672
+    username: admin
+    password: 123456
+
+feign:
+  hystrix:
+    enabled: false
+#  client:
+#    config:
+#      feignName:
+#        connectTimeout: 50000
+#        readTimeout: 50000
+
+#logging:
+#  config: classpath:logback.xml
+
+
