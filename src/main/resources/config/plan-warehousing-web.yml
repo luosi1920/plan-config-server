@@ -22,11 +22,11 @@ spring:
       charset: UTF-8
       enabled: true
       force: true
-  rabbitmq:
-    host: 192.168.71.146
-    port: 5672
-    username: admin
-    password: 123456
+#  rabbitmq:
+#    host: 192.168.71.146
+#    port: 5672
+#    username: admin
+#    password: 123456
 
 feign:
   hystrix:
